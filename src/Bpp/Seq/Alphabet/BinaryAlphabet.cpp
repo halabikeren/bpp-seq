@@ -5,7 +5,7 @@
 //
 
 /*
-   Copyright or ï¿½ or Copr. Bio++ Development Team, (November 17, 2004)
+   Copyright or © or Copr. Bio++ Development Team, (November 17, 2004)
 
    This software is a computer program whose purpose is to provide classes
    for sequences analysis.
@@ -49,14 +49,13 @@ using namespace bpp;
 BinaryAlphabet::BinaryAlphabet()
 {
   // Alphabet content definition
+  registerState(new AlphabetState(-1, "-", "Gap"));
+  registerState(new AlphabetState(2, "?", "Unresolved state"));
+
   for (int i = 0; i < 2; i++)
   {
     registerState(new AlphabetState(i, TextTools::toString(i), ""));
   }
-  
-  registerState(new AlphabetState(-1, "-", "Gap"));
-  registerState(new AlphabetState(2, "?", "Unresolved state"));
-
 }
 
 /******************************************************************************/
