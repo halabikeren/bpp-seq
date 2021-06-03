@@ -1,11 +1,11 @@
 //
 // File: BinaryAlphabet.cpp
 // Authors: Laurent Gueguen
-// Created on: vendredi 20 septembre 2013, à 23h 10
+// Created on: vendredi 20 septembre 2013, ï¿½ 23h 10
 //
 
 /*
-   Copyright or © or Copr. Bio++ Development Team, (November 17, 2004)
+   Copyright or ï¿½ or Copr. Bio++ Development Team, (November 17, 2004)
 
    This software is a computer program whose purpose is to provide classes
    for sequences analysis.
@@ -48,8 +48,6 @@ using namespace bpp;
 
 IntegerAlphabet::IntegerAlphabet(unsigned int max) : MAX_(max)
 {
-  // Alphabet size definition
-  resize(MAX_);
 
   // Alphabet content definition
   registerState(new AlphabetState(-1, "-", "Gap"));
@@ -58,5 +56,6 @@ IntegerAlphabet::IntegerAlphabet(unsigned int max) : MAX_(max)
   {
     registerState(new AlphabetState(i, TextTools::toString(i), ""));
   }
+  registerState(new AlphabetState(MAX_, "?", "Unresolved state")); // state for unknown character
 }
 
