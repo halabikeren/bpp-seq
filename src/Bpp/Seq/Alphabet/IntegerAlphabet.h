@@ -1,11 +1,11 @@
 //
 // File: BinaryAlphabet.h
 // Author: L Gueguen
-// Created on: vendredi 20 septembre 2013, à 23h 01
+// Created on: vendredi 20 septembre 2013, ï¿½ 23h 01
 //
 
 /*
-   Copyright or © or Copr. Bio++ Development Team, (November 17, 2004)
+   Copyright or ï¿½ or Copr. Bio++ Development Team, (November 17, 2004)
 
    This software is a computer program whose purpose is to provide classes
    for sequences analysis.
@@ -77,9 +77,9 @@ public:
   virtual ~IntegerAlphabet() {}
 
 public:
-  unsigned int getSize() const { return MAX_ + 1; }
+  unsigned int getSize() const { return MAX_; }
 
-  unsigned int getNumberOfTypes() const { return MAX_ + 1; }
+  unsigned int getNumberOfTypes() const { return MAX_; }
   
   std::string getAlphabetType() const { return "Integer"; }
   
